@@ -1,0 +1,9 @@
+# Configuración local del editor/asistente (no forma parte del sitio)
+.claude/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Notas personales (no se publican)
+NOTAS-PRIVADAS.md
