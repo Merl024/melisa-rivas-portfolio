@@ -129,6 +129,47 @@
     sections.forEach((section) => observer.observe(section));
   }
 
+  function initMobileMenu() {
+    const topbar = document.querySelector(".topbar");
+    const toggle = document.getElementById("nav-toggle");
+    const menu = document.getElementById("nav-menu");
+    if (!topbar || !toggle || !menu) return;
+
+    const mobileQuery = window.matchMedia("(max-width: 720px)");
+    topbar.classList.add("has-menu");
+
+    function setOpen(open, { focusToggle = false } = {}) {
+      menu.classList.toggle("is-open", open);
+      toggle.setAttribute("aria-expanded", String(open));
+      toggle.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
+      if (focusToggle) toggle.focus();
+    }
+
+    toggle.addEventListener("click", () => {
+      const open = toggle.getAttribute("aria-expanded") !== "true";
+      setOpen(open);
+      if (open) menu.querySelector(".nav__link")?.focus();
+    });
+
+    menu.addEventListener("click", (event) => {
+      if (event.target.closest(".nav__link")) setOpen(false);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && menu.classList.contains("is-open")) {
+        setOpen(false, { focusToggle: true });
+      }
+    });
+
+    document.addEventListener("click", (event) => {
+      if (menu.classList.contains("is-open") && !topbar.contains(event.target)) setOpen(false);
+    });
+
+    mobileQuery.addEventListener("change", (event) => {
+      if (!event.matches) setOpen(false);
+    });
+  }
+
   function renderHero() {
     const p = DATA.profile;
     const container = document.getElementById("hero-ticket");
@@ -685,6 +726,7 @@
 
     initTheme();
     initTabs();
+    initMobileMenu();
     initFilters();
     initPanel();
     initCopyEmail();

@@ -23,7 +23,7 @@ window.PORTFOLIO = {
   about: {
     paragraphs: [
       "Descubrí mi interés por QA cuando me tocó escribir documentación de sistemas y manuales de usuario. Para hacerlo bien, tuve que leer el backlog del producto y entender cómo vivía el sistema el usuario. Ahí aprendí a pensar como él y a anticipar los problemas que podría encontrar.",
-      "Hoy combino desarrollo backend con QA: construyo APIs y servicios con Node.js, Express, MongoDB y PostgreSQL, y los pruebo como lo haría quien los va a usar.",
+      "Hoy combino el desarrollo de software con QA, y me aseguro de que lo que construyo funcione bien antes de que llegue al usuario.",
     ],
     photo: {
       src: "assets/img/melisa-esen.webp",
@@ -239,6 +239,26 @@ window.PORTFOLIO = {
       links: [
         { label: "Repositorio", url: "https://github.com/ChristianRende22/Turimox" },
         { label: "Demo", url: "https://christianrende22.github.io/Turimox/" },
+      ],
+    },
+    {
+      id: "MEL-106",
+      title: "Dental Smiling",
+      summary:
+        "Sistema de escritorio para digitalizar la gestión de pacientes, citas, tratamientos y facturación de una clínica dental.",
+      featured: true,
+      status: "Done",
+      column: "backend",
+      tags: ["Full Stack", "QA"],
+      role: "Desarrolladora full stack y líder del plan de pruebas QA.",
+      tech: ["Python", "PyQt6", "MySQL", "Patrón MVC"],
+      duration: "Desarrollo de marzo a junio de 2024; plan de pruebas de septiembre a noviembre de 2025.",
+      participation: "Aproximadamente 27 % (equipo de 5 personas).",
+      challenges:
+        "Diseñé y normalicé una base de datos MySQL con 13 tablas relacionales, con integridad referencial y eliminaciones en cascada. Desarrollé los módulos de Doctor y Citas con PyQt6 bajo el patrón MVC, y el submódulo de Horarios, que permite consultar la disponibilidad en tiempo real desde Citas. Como líder de QA, diseñé 24 casos de prueba y coordiné pruebas en tres niveles (unitario, integración y sistema), alcanzando una cobertura estimada del 85 % de los requisitos funcionales.",
+      note: "Nominado a Proyecto Destacado · Reconociendo tu Pasión, ESEN 2025",
+      links: [
+        { label: "Repositorio", url: "https://github.com/ChristianRende22/ClinicaDental" },
       ],
     },
   ],
