@@ -392,7 +392,7 @@
     const visibleTech = project.tech.slice(0, CARD_TECH_LIMIT);
     const hiddenCount = project.tech.length - visibleTech.length;
     const featured = project.featured
-      ? `<span class="badge badge--accent">${ICONS.star}Destacado</span>`
+      ? `<span class="badge badge--accent badge--icon" title="Destacado">${ICONS.star}<span class="visually-hidden">Destacado</span></span>`
       : "";
 
     return `
@@ -402,7 +402,7 @@
           class="card"
           data-project="${escapeHTML(project.id)}"
           aria-haspopup="dialog"
-          aria-label="Ver ficha de ${escapeHTML(project.id)} · ${escapeHTML(project.title)}"
+          aria-label="Ver ficha de ${escapeHTML(project.id)} · ${escapeHTML(project.title)}${project.featured ? " · Destacado" : ""}"
         >
           <span class="card__top">
             <span class="ticket-id">${escapeHTML(project.id)}</span>
