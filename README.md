@@ -2,7 +2,7 @@
 
 Portafolio profesional de **Melisa Rivas**, estudiante de Ingeniería de Software y Negocios Digitales en la ESEN (El Salvador) y desarrolladora Full Stack orientada a **backend y QA**.
 
-🔗 **Sitio en vivo:** https://merl024.github.io/portfolio/
+🔗 **Sitio en vivo:** https://merl024.github.io/melisa-rivas-portfolio/
 
 ## Concepto: un bug tracker
 
