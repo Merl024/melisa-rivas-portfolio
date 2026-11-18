@@ -153,7 +153,7 @@
           <span class="ticket__title-main">${escapeHTML(firstName)}</span>
           <span class="ticket__title-echo">${escapeHTML(lastName)}</span>
         </h1>
-        <p class="ticket__type">${ICONS.ticketType}<span>${escapeHTML(p.role)}</span></p>
+        ${p.role ? `<p class="ticket__type">${ICONS.ticketType}<span>${escapeHTML(p.role)}</span></p>` : ""}
 
         <p class="ticket__summary">${escapeHTML(p.summary)}</p>
 
